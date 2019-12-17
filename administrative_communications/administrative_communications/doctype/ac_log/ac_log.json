@@ -1,0 +1,114 @@
+{
+    "autoname": "ACL-.{YY}.-.######",
+    "creation": "2019-11-26 01:01:03.137977",
+    "doctype": "DocType",
+    "editable_grid": 1,
+    "engine": "InnoDB",
+    "field_order": [
+     "transaction_type",
+     "transaction_date",
+     "transaction_detailed",
+     "transaction_time",
+     "transaction_from",
+     "transaction_from_name",
+     "transaction_to",
+     "transaction_to_name",
+     "transaction_notes",
+     "transaction_due_date",
+     "attached_file"
+    ],
+    "fields": [
+     {
+      "columns": 1,
+      "fieldname": "transaction_type",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "label": "Type",
+      "read_only": 1
+     },
+     {
+      "fieldname": "transaction_detailed",
+      "fieldtype": "Data",
+      "label": "Detailed",
+      "read_only": 1
+     },
+     {
+      "default": "Now",
+      "fieldname": "transaction_time",
+      "fieldtype": "Datetime",
+      "label": "Time",
+      "read_only": 1
+     },
+     {
+      "columns": 1,
+      "default": "Today",
+      "fieldname": "transaction_date",
+      "fieldtype": "Date",
+      "in_list_view": 1,
+      "label": "Date",
+      "read_only": 1
+     },
+     {
+      "fieldname": "transaction_from",
+      "fieldtype": "Link",
+      "label": "From",
+      "options": "User",
+      "read_only": 1
+     },
+     {
+      "fieldname": "transaction_to",
+      "fieldtype": "Link",
+      "label": "To",
+      "options": "User",
+      "read_only": 1
+     },
+     {
+      "fieldname": "transaction_notes",
+      "fieldtype": "Small Text",
+      "in_list_view": 1,
+      "label": "Notes",
+      "read_only": 1
+     },
+     {
+      "columns": 1,
+      "fetch_from": "transaction_from.username",
+      "fieldname": "transaction_from_name",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "label": "From Name",
+      "read_only": 1
+     },
+     {
+      "columns": 1,
+      "fetch_from": "transaction_to.username",
+      "fieldname": "transaction_to_name",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "label": "To Name",
+      "read_only": 1
+     },
+     {
+      "fieldname": "transaction_due_date",
+      "fieldtype": "Date",
+      "label": "Due Date",
+      "read_only": 1
+     },
+     {
+      "fieldname": "attached_file",
+      "fieldtype": "Attach",
+      "label": "Attached File",
+      "read_only": 1
+     }
+    ],
+    "istable": 1,
+    "modified": "2019-11-26 14:36:10.751165",
+    "modified_by": "Administrator",
+    "module": "Administrative Communications",
+    "name": "AC Log",
+    "owner": "Administrator",
+    "permissions": [],
+    "quick_entry": 1,
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "track_changes": 1
+   }

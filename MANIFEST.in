@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include administrative_communications *.css
+recursive-include administrative_communications *.csv
+recursive-include administrative_communications *.html
+recursive-include administrative_communications *.ico
+recursive-include administrative_communications *.js
+recursive-include administrative_communications *.json
+recursive-include administrative_communications *.md
+recursive-include administrative_communications *.png
+recursive-include administrative_communications *.py
+recursive-include administrative_communications *.svg
+recursive-include administrative_communications *.txt
+recursive-exclude administrative_communications *.pyc

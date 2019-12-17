@@ -1,0 +1,287 @@
+{
+ "autoname": "naming_series:",
+ "creation": "2019-11-25 14:05:26.277930",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "subject",
+  "naming_series",
+  "ac_type",
+  "owner_user",
+  "owner_user_name",
+  "transaction_date",
+  "transaction_time",
+  "column_break_7",
+  "status",
+  "response_status",
+  "priority",
+  "edited_user",
+  "edited_user_name",
+  "due_date",
+  "section_break_13",
+  "last_message",
+  "section_break_18",
+  "transaction_type",
+  "transaction_detailed",
+  "transaction_due_date",
+  "tag",
+  "attached_file",
+  "column_break_21",
+  "transaction_to",
+  "transaction_to_name",
+  "assign_to",
+  "notes",
+  "section_break_25",
+  "messages",
+  "section_break_15",
+  "ac_log",
+  "section_break_32",
+  "recipients"
+ ],
+ "fields": [
+  {
+   "fieldname": "subject",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Subject",
+   "reqd": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "AC-.YY.-.######",
+   "print_hide": 1
+  },
+  {
+   "fieldname": "ac_type",
+   "fieldtype": "Link",
+   "label": "Type",
+   "options": "Communications Type"
+  },
+  {
+   "fetch_from": "User",
+   "fieldname": "owner_user",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Owner User",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "owner_user.username",
+   "fieldname": "owner_user_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Owner User Name",
+   "read_only": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "transaction_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Transaction Date",
+   "read_only": 1
+  },
+  {
+   "description": "America/Adak",
+   "fieldname": "transaction_time",
+   "fieldtype": "Time",
+   "label": "Transaction Time",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Open\nClosed",
+   "read_only": 1
+  },
+  {
+   "default": "Medium",
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Priority",
+   "options": "Medium\nLow\nHigh"
+  },
+  {
+   "fieldname": "edited_user",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Edited User",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "edited_user.username",
+   "fieldname": "edited_user_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Edited User Name",
+   "read_only": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "due_date",
+   "fieldtype": "Date",
+   "label": "Due Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_13",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "last_message",
+   "fieldtype": "Small Text",
+   "label": "Last Message",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_15",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "messages",
+   "fieldtype": "Small Text",
+   "label": "Messages",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_18",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "transaction_type",
+   "fieldtype": "Link",
+   "label": "Transaction Type",
+   "options": "Communications Type"
+  },
+  {
+   "fieldname": "transaction_detailed",
+   "fieldtype": "Link",
+   "label": "Transaction Detailed",
+   "options": "Transaction Detailed"
+  },
+  {
+   "default": "Today",
+   "fieldname": "transaction_due_date",
+   "fieldtype": "Date",
+   "label": "Due Date"
+  },
+  {
+   "fieldname": "attached_file",
+   "fieldtype": "Attach",
+   "label": "Attached File"
+  },
+  {
+   "fieldname": "column_break_21",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "transaction_to",
+   "fieldtype": "Link",
+   "label": "Transaction To",
+   "options": "User"
+  },
+  {
+   "fetch_from": "transaction_to.username",
+   "fieldname": "transaction_to_name",
+   "fieldtype": "Data",
+   "label": "Transaction To Name"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "section_break_25",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "ac_log",
+   "fieldtype": "Table",
+   "label": "Log",
+   "options": "AC Log",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "response_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Response Status",
+   "options": "Waiting\nOverdue\nClosed",
+   "read_only": 1
+  },
+  {
+   "fieldname": "tag",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "ignore_user_permissions": 1,
+   "label": "Tag",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "assign_to",
+   "fieldtype": "Check",
+   "label": "Assign To"
+  },
+  {
+   "fieldname": "recipients",
+   "fieldtype": "Small Text",
+   "hidden": 1,
+   "label": "Recipients",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_32",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "modified": "2019-12-17 03:21:44.502110",
+ "modified_by": "Administrator",
+ "module": "Administrative Communications",
+ "name": "Administrative Communications",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "if_owner": 1,
+   "read": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "subject",
+ "show_name_in_global_search": 1,
+ "show_preview_popup": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "subject"
+}
