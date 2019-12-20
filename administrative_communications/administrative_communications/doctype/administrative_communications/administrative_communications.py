@@ -27,6 +27,7 @@ class AdministrativeCommunications(Document):
 		self.add_transaction_comment()
 		self.set_indicator()
 		self.clear_transaction_fileds()
+		# self.set_overdue()
 
 
 
@@ -174,3 +175,21 @@ class AdministrativeCommunications(Document):
 					self.last_message, 
 					self.edited_user,
 				)
+
+
+	
+
+	def update_status(self):
+		if self.status not in ('Closed') and self.due_date:
+			from datetime import datetime
+			if self.due_date < datetime.now().date():
+				self.db_set('response_status', 'Overdue', update_modified=False)
+				
+
+@frappe.whitelist()
+def set_overdue(doc, method):
+	communications = frappe.get_all("Administrative Communications", filters={'status':['not in',['Closed']]})
+	for n in communications:
+		if getdate(frappe.db.get_value("Administrative Communications", n.name, "due_date")) > getdate(today()):
+			continue
+		frappe.get_doc("Administrative Communications", n.name).update_status()

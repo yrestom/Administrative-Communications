@@ -80,23 +80,23 @@ app_license = "MIT"
 # Hook on document methods and events
 
 # doc_events = {
-# 	"*": {
-# 		"on_update": "method",
+# 	"Administrative Communications": {
+# 		"on_update": "administrative_communications.administrative_communications.doctype.administrative_communications.administrative_communications.set_overdue",
 # 		"on_cancel": "method",
 # 		"on_trash": "method"
-#	}
+	# }
 # }
 
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
+scheduler_events = {
 # 	"all": [
 # 		"administrative_communications.tasks.all"
 # 	],
-# 	"daily": [
-# 		"administrative_communications.tasks.daily"
-# 	],
+	"daily": [
+		"administrative_communications.administrative_communications.doctype.administrative_communications.administrative_communications.set_overdue"
+	],
 # 	"hourly": [
 # 		"administrative_communications.tasks.hourly"
 # 	],
@@ -106,7 +106,7 @@ app_license = "MIT"
 # 	"monthly": [
 # 		"administrative_communications.tasks.monthly"
 # 	]
-# }
+}
 
 # Testing
 # -------
