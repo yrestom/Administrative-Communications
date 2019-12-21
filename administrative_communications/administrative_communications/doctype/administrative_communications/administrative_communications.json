@@ -151,6 +151,7 @@
   {
    "fieldname": "messages",
    "fieldtype": "Small Text",
+   "hidden": 1,
    "label": "Messages",
    "read_only": 1
   },
@@ -249,7 +250,7 @@
    "fieldtype": "Section Break"
   }
  ],
- "modified": "2019-12-17 03:21:44.502110",
+ "modified": "2019-12-21 02:08:32.465541",
  "modified_by": "Administrator",
  "module": "Administrative Communications",
  "name": "Administrative Communications",
