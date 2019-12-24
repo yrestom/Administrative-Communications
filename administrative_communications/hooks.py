@@ -97,9 +97,9 @@ scheduler_events = {
 	"daily": [
 		"administrative_communications.administrative_communications.doctype.administrative_communications.administrative_communications.set_overdue"
 	],
-# 	"hourly": [
-# 		"administrative_communications.tasks.hourly"
-# 	],
+	# "hourly": [
+	# 	"administrative_communications.tasks.weekly"
+	# ],
 # 	"weekly": [
 # 		"administrative_communications.tasks.weekly"
 # 	]

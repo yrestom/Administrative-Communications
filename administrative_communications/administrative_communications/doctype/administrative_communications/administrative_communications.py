@@ -187,7 +187,7 @@ class AdministrativeCommunications(Document):
 				
 
 @frappe.whitelist()
-def set_overdue(doc, method):
+def set_overdue():
 	communications = frappe.get_all("Administrative Communications", filters={'status':['not in',['Closed']]})
 	for n in communications:
 		if getdate(frappe.db.get_value("Administrative Communications", n.name, "due_date")) > getdate(today()):
